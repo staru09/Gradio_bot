@@ -73,6 +73,8 @@ These commands are also available in the `docker_init.sh` script.
 ---
 
 ### **4. Fetch Data from a GitHub Repository**
+You may need to add GitHub Access Tokens before running these scripts. Refer to [this guide](github_access_token.md) for instructions.
+
 Use the provided Python scripts to extract markdown or Python files from a GitHub repository.  
 
 #### Command for Markdown Files:
