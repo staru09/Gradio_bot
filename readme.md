@@ -77,6 +77,11 @@ You may need to add GitHub Access Tokens before running these scripts. Refer to 
 
 Use the provided Python scripts to extract markdown or Python files from a GitHub repository.  
 
+
+**Note:** The GitHub API has certain rate limits, so **to process large repositories, it is advisable to clone them locally first** and then run [**local_parser**](local_parser.py). To **select files with a specific extension or from a particular folder**, you can use this [**tool**](https://github.com/abinthomasonline/repo2txt) to download the repository locally.
+
+---
+
 #### Command for Markdown Files:
 ```bash
 python md_file.py <repo_link> <path_to_output.csv>
