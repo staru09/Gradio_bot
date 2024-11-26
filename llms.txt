@@ -1,0 +1,77 @@
+# Gradio
+
+> Gradio is an open-source Python package that allows you to quickly build a demo or web application for your machine learning model, API, or any arbitrary Python function. You can then share a link to your demo or web application in just a few seconds using Gradio's built-in sharing features. No JavaScript, CSS, or web hosting experience needed!. Follow the instructions below to get started. 
+
+
+## Quickstart
+
+Start by creating a virtual environment in your project directory:
+
+```bash
+python -m venv .env
+```
+
+Activate the virtual environment:
+
+```bash
+source .env/bin/activate
+```
+
+You can install gradio using this command:
+
+```bash
+pip install --upgrade gradio
+```
+
+- You can run Gradio in your favorite code editor, Jupyter notebook, Google Colab, or anywhere else you write Python.
+
+```python
+import gradio as gr
+
+def greet(name, intensity):
+    return "Hello, " + name + "!" * int(intensity)
+
+demo = gr.Interface(
+    fn=greet,
+    inputs=["text", "slider"],
+    outputs=["text"],
+)
+
+demo.launch()
+```
+
+- Gradio allows to easily share a demo without having to worry about the hassle of hosting on a web server. Simply set share=True in launch(), and a publicly accessible URL will be created for your demo. Let's revisit our example demo, but change the last line as follows:
+
+```python
+import gradio as gr
+
+def greet(name):
+    return "Hello " + name + "!"
+
+demo = gr.Interface(fn=greet, inputs="textbox", outputs="textbox")
+    
+demo.launch(share=True)  # Share your demo with just 1 extra parameter 🚀
+```
+This will generate a public URL like [this](https://a23dsf231adb.gradio.live)
+
+ 
+## Docs
+
+[The Interface class](https://www.gradio.app/guides/the-interface-class)
+[Blocks and Event Listeners](https://www.gradio.app/guides/blocks-and-event-listeners)
+[Bulding Demos](https://www.gradio.app/docs/gradio/interface)
+[Gradio Python Client](https://www.gradio.app/docs/python-client/introduction)
+[Gradio Js Client](https://www.gradio.app/docs/js-client)
+[Gradio Rust Client](https://www.gradio.app/docs/third-party-clients/rust-client)
+[Js components for Gradio](https://www.gradio.app/docs/js/atoms)
+[Custom Gradio components](https://www.gradio.app/guides/custom-components-in-five-minutes)
+[Gradio lite](https://www.gradio.app/guides/gradio-lite)
+
+## Community Resources
+
+- [Gradio GitHub Repository](https://github.com/gradio-app/gradio): Find the latest updates and issues about Gradio development.
+
+- [Discord](https://discord.com/invite/feTf9x3ZSB):The official community server to discuss updates and use cases of Gradio.
+ 
+- [Gradio: Hassle-Free Sharing and Testing of ML Models in the Wild
+](https://arxiv.org/pdf/1906.02569): The paper that presented Gradio at ICML.
