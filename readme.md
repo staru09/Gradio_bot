@@ -84,15 +84,16 @@ Use the provided Python scripts to extract markdown or Python files from a GitHu
 
 #### Command for Markdown Files:
 ```bash
-python md_file.py <repo_link> <path_to_output.csv>
+python md_file.py <repo_link> <path_to_output.csv> --exclude folder1 folder2 
 ```
 
 #### Command for Python Files:
 ```bash
-python python_file.py <repo_link> <path_to_output.csv>
+python python_file.py <repo_link> <path_to_output.csv> --exclude folder1 folder2 
 ```
 
 These commands will generate a CSV file containing the file paths and their content.
+```exclude``` flag is optional when we want to skip any specific folder from the repo.
 
 ---
 
